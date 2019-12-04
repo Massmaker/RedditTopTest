@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullSizeImageViewController" customModule="Reddit_test" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="f9c-Eh-BNM" id="M47-gk-4B6"/>
+                <outlet property="loadingIndicator" destination="l5w-Sc-daa" id="rgX-bg-8ds"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-Eh-BNM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="l5w-Sc-daa">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f9c-Eh-BNM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5K3-gj-I0a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f9c-Eh-BNM" secondAttribute="bottom" id="ags-if-Lr7"/>
+                <constraint firstItem="f9c-Eh-BNM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="blk-iG-o5c"/>
+                <constraint firstItem="l5w-Sc-daa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="h6D-dw-rij"/>
+                <constraint firstItem="l5w-Sc-daa" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="xFX-C5-jxC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f9c-Eh-BNM" secondAttribute="trailing" id="xP6-md-QFf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="124"/>
+        </view>
+    </objects>
+</document>

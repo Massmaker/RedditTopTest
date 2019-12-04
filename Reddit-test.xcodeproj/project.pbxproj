@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF7BC6F72395145C002C7397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC6F62395145C002C7397 /* AppDelegate.swift */; };
+		EF7BC6F92395145C002C7397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC6F82395145C002C7397 /* SceneDelegate.swift */; };
+		EF7BC6FB2395145C002C7397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC6FA2395145C002C7397 /* ViewController.swift */; };
+		EF7BC6FE2395145C002C7397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7BC6FC2395145C002C7397 /* Main.storyboard */; };
+		EF7BC7002395145E002C7397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7BC6FF2395145E002C7397 /* Assets.xcassets */; };
+		EF7BC7032395145E002C7397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7BC7012395145E002C7397 /* LaunchScreen.storyboard */; };
+		EF7BC70F239516D7002C7397 /* RequestsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC70E239516D7002C7397 /* RequestsHandler.swift */; };
+		EF7BC71123952713002C7397 /* ModelEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC71023952713002C7397 /* ModelEntities.swift */; };
+		EF7BC71423952AE4002C7397 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC71323952AE4002C7397 /* Model.swift */; };
+		EF7BC71623952D28002C7397 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC71523952D28002C7397 /* ModelDelegate.swift */; };
+		EF7BC71923953032002C7397 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BC71723953032002C7397 /* TableViewCell.swift */; };
+		EF7BC71A23953032002C7397 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7BC71823953032002C7397 /* TableViewCell.xib */; };
+		EF84904623954ED3004A31DE /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84904523954ED3004A31DE /* Date+Extensions.swift */; };
+		EF84904923956243004A31DE /* ImageChache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84904823956243004A31DE /* ImageChache.swift */; };
+		EF84904B23956683004A31DE /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84904A23956683004A31DE /* NetworkErrors.swift */; };
+		EF849050239573D3004A31DE /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84904F239573D3004A31DE /* Threading.swift */; };
+		EFC302A123964B6100792DCD /* FullSizeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC3029F23964B6100792DCD /* FullSizeImageViewController.swift */; };
+		EFC302A223964B6100792DCD /* FullSizeImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC302A023964B6100792DCD /* FullSizeImageViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF7BC6F32395145C002C7397 /* Reddit-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7BC6F62395145C002C7397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF7BC6F82395145C002C7397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF7BC6FA2395145C002C7397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF7BC6FD2395145C002C7397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF7BC6FF2395145E002C7397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF7BC7022395145E002C7397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF7BC7042395145E002C7397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7BC70E239516D7002C7397 /* RequestsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsHandler.swift; sourceTree = "<group>"; };
+		EF7BC71023952713002C7397 /* ModelEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEntities.swift; sourceTree = "<group>"; };
+		EF7BC71323952AE4002C7397 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EF7BC71523952D28002C7397 /* ModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
+		EF7BC71723953032002C7397 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		EF7BC71823953032002C7397 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		EF84904523954ED3004A31DE /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		EF84904823956243004A31DE /* ImageChache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChache.swift; sourceTree = "<group>"; };
+		EF84904A23956683004A31DE /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		EF84904F239573D3004A31DE /* Threading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		EFC3029F23964B6100792DCD /* FullSizeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageViewController.swift; sourceTree = "<group>"; };
+		EFC302A023964B6100792DCD /* FullSizeImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullSizeImageViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7BC6F02395145C002C7397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF7BC6EA2395145C002C7397 = {
+			isa = PBXGroup;
+			children = (
+				EF7BC6F52395145C002C7397 /* Reddit-test */,
+				EF7BC7012395145E002C7397 /* LaunchScreen.storyboard */,
+				EF7BC7042395145E002C7397 /* Info.plist */,
+				EF7BC6F42395145C002C7397 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7BC6F42395145C002C7397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BC6F32395145C002C7397 /* Reddit-test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7BC6F52395145C002C7397 /* Reddit-test */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BC6F62395145C002C7397 /* AppDelegate.swift */,
+				EF7BC6F82395145C002C7397 /* SceneDelegate.swift */,
+				EF84904C2395731C004A31DE /* Screens */,
+				EF7BC6FF2395145E002C7397 /* Assets.xcassets */,
+				EF84904E239573BC004A31DE /* GlobalFunctions */,
+				EF84904423954EBF004A31DE /* Extensions */,
+				EF8490472395622F004A31DE /* ImageCaching */,
+				EF7BC71223952AD0002C7397 /* Model */,
+				EF7BC70B239515F3002C7397 /* Networking */,
+			);
+			path = "Reddit-test";
+			sourceTree = "<group>";
+		};
+		EF7BC70B239515F3002C7397 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BC70E239516D7002C7397 /* RequestsHandler.swift */,
+				EF84904A23956683004A31DE /* NetworkErrors.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EF7BC71223952AD0002C7397 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BC71323952AE4002C7397 /* Model.swift */,
+				EF7BC71523952D28002C7397 /* ModelDelegate.swift */,
+				EF7BC71023952713002C7397 /* ModelEntities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF7BC71B23953038002C7397 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BC71723953032002C7397 /* TableViewCell.swift */,
+				EF7BC71823953032002C7397 /* TableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		EF84904423954EBF004A31DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF84904523954ED3004A31DE /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF8490472395622F004A31DE /* ImageCaching */ = {
+			isa = PBXGroup;
+			children = (
+				EF84904823956243004A31DE /* ImageChache.swift */,
+			);
+			path = ImageCaching;
+			sourceTree = "<group>";
+		};
+		EF84904C2395731C004A31DE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EF84904D2395732C004A31DE /* Main */,
+				EFC3029E23964B1600792DCD /* FullsizePhoto */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EF84904D2395732C004A31DE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EF7BC6FA2395145C002C7397 /* ViewController.swift */,
+				EF7BC6FC2395145C002C7397 /* Main.storyboard */,
+				EF7BC71B23953038002C7397 /* TableViewCell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EF84904E239573BC004A31DE /* GlobalFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				EF84904F239573D3004A31DE /* Threading.swift */,
+			);
+			path = GlobalFunctions;
+			sourceTree = "<group>";
+		};
+		EFC3029E23964B1600792DCD /* FullsizePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				EFC3029F23964B6100792DCD /* FullSizeImageViewController.swift */,
+				EFC302A023964B6100792DCD /* FullSizeImageViewController.xib */,
+			);
+			path = FullsizePhoto;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7BC6F22395145C002C7397 /* Reddit-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7BC7072395145E002C7397 /* Build configuration list for PBXNativeTarget "Reddit-test" */;
+			buildPhases = (
+				EF7BC6EF2395145C002C7397 /* Sources */,
+				EF7BC6F02395145C002C7397 /* Frameworks */,
+				EF7BC6F12395145C002C7397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reddit-test";
+			productName = "Reddit-test";
+			productReference = EF7BC6F32395145C002C7397 /* Reddit-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7BC6EB2395145C002C7397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Ivan Yavorin";
+				TargetAttributes = {
+					EF7BC6F22395145C002C7397 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EF7BC6EE2395145C002C7397 /* Build configuration list for PBXProject "Reddit-test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7BC6EA2395145C002C7397;
+			productRefGroup = EF7BC6F42395145C002C7397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7BC6F22395145C002C7397 /* Reddit-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF7BC6F12395145C002C7397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC302A223964B6100792DCD /* FullSizeImageViewController.xib in Resources */,
+				EF7BC7032395145E002C7397 /* LaunchScreen.storyboard in Resources */,
+				EF7BC71A23953032002C7397 /* TableViewCell.xib in Resources */,
+				EF7BC7002395145E002C7397 /* Assets.xcassets in Resources */,
+				EF7BC6FE2395145C002C7397 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7BC6EF2395145C002C7397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7BC71423952AE4002C7397 /* Model.swift in Sources */,
+				EF84904923956243004A31DE /* ImageChache.swift in Sources */,
+				EF7BC6FB2395145C002C7397 /* ViewController.swift in Sources */,
+				EF84904623954ED3004A31DE /* Date+Extensions.swift in Sources */,
+				EF849050239573D3004A31DE /* Threading.swift in Sources */,
+				EF7BC71623952D28002C7397 /* ModelDelegate.swift in Sources */,
+				EF7BC71923953032002C7397 /* TableViewCell.swift in Sources */,
+				EFC302A123964B6100792DCD /* FullSizeImageViewController.swift in Sources */,
+				EF7BC71123952713002C7397 /* ModelEntities.swift in Sources */,
+				EF7BC6F72395145C002C7397 /* AppDelegate.swift in Sources */,
+				EF84904B23956683004A31DE /* NetworkErrors.swift in Sources */,
+				EF7BC6F92395145C002C7397 /* SceneDelegate.swift in Sources */,
+				EF7BC70F239516D7002C7397 /* RequestsHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF7BC6FC2395145C002C7397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7BC6FD2395145C002C7397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF7BC7012395145E002C7397 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7BC7022395145E002C7397 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF7BC7052395145E002C7397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Reddit-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF7BC7062395145E002C7397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Reddit-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF7BC7082395145E002C7397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Reddit-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF7BC7092395145E002C7397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Reddit-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7BC6EE2395145C002C7397 /* Build configuration list for PBXProject "Reddit-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7BC7052395145E002C7397 /* Debug */,
+				EF7BC7062395145E002C7397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7BC7072395145E002C7397 /* Build configuration list for PBXNativeTarget "Reddit-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7BC7082395145E002C7397 /* Debug */,
+				EF7BC7092395145E002C7397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7BC6EB2395145C002C7397 /* Project object */;
+}
