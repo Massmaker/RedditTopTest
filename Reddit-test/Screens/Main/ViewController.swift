@@ -13,8 +13,15 @@ class ViewController: UIViewController {
 
    @IBOutlet private weak var table:UITableView?
    @IBOutlet private weak var loadingIndicator:UIActivityIndicatorView?
+   @IBOutlet private weak var backgroundLogo:UIImageView?
+   @IBOutlet private weak var tableViewBottom:NSLayoutConstraint?
+   
    
    private lazy var model = Model.defaultModel
+   
+   private var needsFullReload = false
+   private var needsToLoadNewData = true
+   private var currentOffset:CGFloat = 0.0
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -25,7 +32,9 @@ class ViewController: UIViewController {
       table?.estimatedRowHeight = 170.0
       table?.rowHeight = UITableView.automaticDimension
       table?.isHidden = true
+      backgroundLogo?.isHidden = false
       loadingIndicator?.startAnimating()
+      needsFullReload = true
    }
    
    override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +56,7 @@ class ViewController: UIViewController {
       unsubscribeFromNotifications()
    }
    
+   //MARK: -
    private func subscribeForThumbLoadingNotification() {
       
       let noteName = NSNotification.Name(kThumbnailCachingFinishedNotification)
@@ -65,6 +75,8 @@ class ViewController: UIViewController {
    private func unsubscribeFromNotifications() {
       NotificationCenter.default.removeObserver(self)
    }
+   
+   //MARK: -
    
    @objc func handleThumbnailNotification(_ note:Notification) {
       if let obj = note.object as? Model,
@@ -112,7 +124,6 @@ class ViewController: UIViewController {
             let entry = model.entryFor(topPath) else { return }
       
       model.currentTopPost = entry.id
-//      print("Scrolled to currentTopPost:  \(model.currentTopPost!)")
    }
    
    @objc func scrollToTopMostPost() {
@@ -121,30 +132,71 @@ class ViewController: UIViewController {
       
 //      print("Scrolling to: \(topPostId)")
       
-      table?.scrollToRow(at: indexPath, at: .top, animated: false)
+      UIView .animate(withDuration: 0.5) {[weak self] in
+         self?.table?.scrollToRow(at: indexPath, at: .top, animated: false)
+      }
+   }
+   
+   private func beginPageLoadingAnimation( _ animationHasBegun:(() -> Void)?) {
+      
+      
+      tableViewBottom?.constant = -100.0
+      UIView.animate(withDuration: 0.25, animations:({[weak self] in
+         self?.view.layoutIfNeeded()
+      }), completion: {_ in
+         self.loadingIndicator?.startAnimating()
+         animationHasBegun?()
+      })
+   }
+   
+   private func finishPageLoadingAnimation() {
+      
+      tableViewBottom?.constant = 0.0
+      
+      UIView.animate(withDuration: 0.25, animations: {[weak self] in
+         self?.view.layoutIfNeeded()
+      }) { [weak self] _ in
+         self?.loadingIndicator?.stopAnimating()
+         
+         self?.table?.reloadData()
+      }
    }
 }
 
 //MARK: - ModelDelegate
 
 extension ViewController:ModelDelegate {
+   
    func modelDidGetNextEntries() {
       
       if (model.entriesCount == 0) {
-         model.getNextEntries() //load from the network
+         beginPageLoadingAnimation {
+            self.model.getNextEntries() //load from the network
+         }
+         
       }
       else {
          table?.delegate = self
          table?.dataSource = self
-         table?.reloadData()
          
-         loadingIndicator?.stopAnimating()
+         if needsFullReload {
+            table?.reloadData()
+         }
+         
+         
          table?.isHidden = false
+         backgroundLogo?.isHidden = true
          
+         if needsFullReload {
          self.perform(#selector(scrollToTopMostPost),
                  with: nil,
-                 afterDelay: 0.0,
+                 afterDelay: 0.5,
                  inModes: [RunLoop.Mode.default])
+         }
+         
+         needsFullReload = false
+         
+         finishPageLoadingAnimation()
       }
    }
 }
@@ -178,11 +230,12 @@ extension ViewController: UITableViewDelegate {
       
       //some easy unsafe pagination
       if indexPath.row == (model.entriesCount - 1) {
-         model.getNextEntries()
+         needsToLoadNewData = true
       }
    }
    
    //MARK: UIScrollViewDelegate
+   
    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
       saveCurrentPageInfo()
    }
@@ -195,6 +248,24 @@ extension ViewController: UITableViewDelegate {
    
    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
       saveCurrentPageInfo()
+   }
+   
+   //load next page only after user`s request
+   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+      currentOffset = table?.contentOffset.y ?? 0.0
+   }
+   
+   func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+                                  withVelocity velocity: CGPoint,
+                                  targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+      
+      let targetOffset = targetContentOffset.pointee
+      
+      if velocity.y > 2.5 && targetOffset.y == currentOffset  {
+         beginPageLoadingAnimation {[weak self] in
+            self?.model.getNextEntries()
+         }
+      }
    }
 }
 
